@@ -1,22 +1,14 @@
 /* ContactDetail.css */
 
-/* Set a background color */
-body {
-    background-color: #fff;
-}
-
-/* Center the content */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.detail-container{
+    background-color: #ffffffca;
+    border-top: 1.5px solid rgb(231,231,231);
 }
 
 /* Style the contact details */
 .contact-details {
-    background-color: #fff;
     padding: 20px;
+    padding-left: 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,7 +21,7 @@ body {
     border-radius: 3px;
     border: none;
     height: 40px;
-    width: 75px;
+    width: 175px;
     font-weight:600;
     cursor: pointer;
 }
@@ -38,18 +30,28 @@ body {
     background-color: #0056b3;
 }
 /* Style the form */
-.form {
+.edit-form {
     margin-top: 20px;
+    margin-left: 40px;
 }
 
 /* Style the form fields */
 .edit-form input, email [type="text"],
 .edit-form textarea {
-    width: 100%;
+    display: block;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.sub-title{
+    font-weight: 600;
+    font-size: 18px;
     margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 /* Style the submit button */

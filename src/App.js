@@ -14,6 +14,13 @@ function App() {
       .catch(error => console.error("Error fetching data:", error));
   },[]);
 
+  // update contact information
+  const updateContact = (updatedContact) => {
+    setContacts(contacts.map(contact => 
+      contact.id === updatedContact.id ? updatedContact : contact
+    ));
+  };
+
   return (
     <div className='app-wrapper'>
       <h1 style={{ marginBottom: '20px' }}>Contacts Application</h1>
@@ -21,7 +28,7 @@ function App() {
         <div className="app-container">
           <Routes>
             <Route path="/" element={<ContactList contacts={contacts} />} />
-            <Route path="/contact/:id" element={<ContactDetail contacts={contacts}/>} />
+            <Route path="/contact/:id" element={<ContactDetail contacts={contacts} onUpdateContact={updateContact}/>} />
           </Routes>
         </div>
       </Router>

@@ -4,7 +4,7 @@
     border-radius: 10px;
     border: 1px solid lightgray;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    min-width: 300px;
     margin: 10px 10px;
     display: inline-block;
     transition: transform 0.2s;

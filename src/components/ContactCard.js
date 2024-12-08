@@ -20,9 +20,9 @@ const ContactCard = ({ contact, onDelete }) => {
     return (
         <div className="card" onClick={handleCardClick}>
             <h3>{contact.name}</h3>
-            <p>{contact.email}</p>
-            <p>{contact.phone}</p>
-            <p>{contact.website}</p>
+            <p><strong>Email:</strong> {contact.email}</p>
+            <p><strong>Phone:</strong> {contact.phone}</p>
+            <p><strong>Website:</strong> {contact.website}</p>
             <div className="buttons">
                 <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
             </div>
