@@ -15,7 +15,7 @@ function App() {
   },[]);
 
   return (
-    <div>
+    <div className='app-wrapper'>
       <h1 style={{ marginBottom: '20px' }}>Contacts Application</h1>
       <Router>
         <div className="app-container">

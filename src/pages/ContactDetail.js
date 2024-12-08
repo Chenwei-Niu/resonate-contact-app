@@ -15,7 +15,7 @@ const ContactDetail = () => {
     });
     const location = useLocation();
     const { contact } = location.state;
-    
+
     useEffect(() => {
         setFormData({
             name: contact.name,
@@ -54,8 +54,8 @@ const ContactDetail = () => {
         <div className="detail-container">
             {isEditing ? (
             <div className="edit-form">
-                <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
-                <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
+                Name: <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
+                Email: <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
                 <input type="text" name="phone" value={formData.phone} onChange={handleInputChange} />
                 <input type="text" name="website" value={formData.website} onChange={handleInputChange} />
                 <input type="text" name="username" value={formData.username} onChange={handleInputChange} />
@@ -72,7 +72,7 @@ const ContactDetail = () => {
                 <p><strong>Username:</strong> {contact.username}</p>
                 <p><strong>Address:</strong> {contact.address.street}, {contact.address.city}</p>
                 <p><strong>Company:</strong> {contact.company.name}</p>
-                <button onClick={() => setIsEditing(true)}>Edit</button>
+                <button className='edit-button' onClick={() => setIsEditing(true)}>Edit</button>
             </div>
             )}
         </div>
